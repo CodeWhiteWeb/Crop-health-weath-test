@@ -19,7 +19,7 @@ if (navigator.geolocation) {
 
 	// API URL
 	const base =
-`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&` +
+`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&` +
 `lon=${lon}&appid=6d055e39ee237af35ca066f35474e9df`;
 
 	// Calling the API
@@ -38,15 +38,25 @@ if (navigator.geolocation) {
 		icon.innerHTML =
 			`<img src='https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png' style= 'height:10rem'/>`;
 	if ( temp <= 25) {
-		document.getElementById("rice").innerHTML = "good";
-		document.getElementById("wheat").innerHTML = "good";
-		document.getElementById("millets").innerHTML = "good";
-		document.getElementById("maize").innerHTML = "good";
-}else if ( temp >= 25) {
-		document.getElementById("rice").innerHTML = "bad";
-		document.getElementById("wheat").innerHTML = "bad";
-		document.getElementById("millets").innerHTML = "bad";
-		document.getElementById("maize").innerHTML = "bad";
+		document.getElementById("rice").innerHTML = "Good";
+		document.getElementById("wheat").innerHTML = "Good";
+		document.getElementById("millets").innerHTML = "Good";
+		document.getElementById("maize").innerHTML = "Good";
+}else if ( temp <= 25) {
+		document.getElementById("rice").innerHTML = "Perfect";
+		document.getElementById("wheat").innerHTML = "Perfect";
+		document.getElementById("millets").innerHTML = "Perfect";
+		document.getElementById("maize").innerHTML = "Perfect";
+}else if ( temp >= 37.2222) {
+		document.getElementById("rice").innerHTML = "Bad";
+		document.getElementById("wheat").innerHTML = "Bad";
+		document.getElementById("millets").innerHTML = "Bad";
+		document.getElementById("maize").innerHTML = "Bad";
+}else if ( temp <= 4.44444) {
+		document.getElementById("rice").innerHTML = "Bad";
+		document.getElementById("wheat").innerHTML = "Bad";
+		document.getElementById("millets").innerHTML = "Bad";
+		document.getElementById("maize").innerHTML = "Bad";
 }
 });
 });
