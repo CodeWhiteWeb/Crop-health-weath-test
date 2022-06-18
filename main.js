@@ -40,27 +40,27 @@ if (navigator.geolocation) {
 
 			//rice
 if ( (temp >= 21) && (temp <= 37)) {
-		document.getElementById("rice").innerHTML = "Good";
+		document.getElementById("rice").innerHTML = '<p class="text-green-400">Good</p>';
 } else {
-	document.getElementById("rice").innerHTML = "Bad";
+	document.getElementById("rice").innerHTML = '<p class="text-red-400">Bad</p>';
 }
 			//wheat
 if ( (temp >= 21) && (temp <= 24)) {
-	document.getElementById("wheat").innerHTML = "Good";
+	document.getElementById("wheat").innerHTML = '<p class="text-green-400">Good</p>';
 } else {
-	document.getElementById("wheat").innerHTML = "Bad";
+	document.getElementById("wheat").innerHTML = '<p class="text-red-400">Bad</p>';
 }
 			//millets
 if ( (temp >= 26) && (temp <= 29)) {
-	document.getElementById("millets").innerHTML = "Good";
+	document.getElementById("millets").innerHTML = '<p class="text-green-400">Good</p>';
 } else {
-	document.getElementById("millets").innerHTML = "Bad";
+	document.getElementById("millets").innerHTML = '<p class="text-red-400">Bad</p>';
 }
 			//maize
 if ( (temp >= 21) && (temp <= 27)) {
-	document.getElementById("maize").innerHTML = "Good";
+	document.getElementById("maize").innerHTML = '<p class="text-green-400">Good</p>';
 } else {
-	document.getElementById("maize").innerHTML = "Bad";
+	document.getElementById("maize").innerHTML = '<p class="text-red-400">Bad</p>';
 }
 });
 });
