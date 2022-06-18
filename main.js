@@ -20,7 +20,7 @@ if (navigator.geolocation) {
 	// API URL
 	const base =
 `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&` +
-`lon=${lon}&appid=6d055e39ee237af35ca066f35474e9df`;
+`lon=${lon}&appid=${api}`;
 
 	// Calling the API
 	fetch(base)
@@ -37,26 +37,30 @@ if (navigator.geolocation) {
 		loc.textContent = data.name + "," + data.sys.country;
 		icon.innerHTML =
 			`<img src='https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png' style= 'height:10rem'/>`;
-	if ( temp <= 25) {
+
+			//rice
+if ( (temp >= 21) && (temp <= 37)) {
 		document.getElementById("rice").innerHTML = "Good";
-		document.getElementById("wheat").innerHTML = "Good";
-		document.getElementById("millets").innerHTML = "Good";
-		document.getElementById("maize").innerHTML = "Good";
-}else if ( temp <= 25) {
-		document.getElementById("rice").innerHTML = "Perfect";
-		document.getElementById("wheat").innerHTML = "Perfect";
-		document.getElementById("millets").innerHTML = "Perfect";
-		document.getElementById("maize").innerHTML = "Perfect";
-}else if ( temp >= 37.2222) {
-		document.getElementById("rice").innerHTML = "Bad";
-		document.getElementById("wheat").innerHTML = "Bad";
-		document.getElementById("millets").innerHTML = "Bad";
-		document.getElementById("maize").innerHTML = "Bad";
-}else if ( temp <= 4.44444) {
-		document.getElementById("rice").innerHTML = "Bad";
-		document.getElementById("wheat").innerHTML = "Bad";
-		document.getElementById("millets").innerHTML = "Bad";
-		document.getElementById("maize").innerHTML = "Bad";
+} else {
+	document.getElementById("rice").innerHTML = "Bad";
+}
+			//wheat
+if ( (temp >= 21) && (temp <= 24)) {
+	document.getElementById("wheat").innerHTML = "Good";
+} else {
+	document.getElementById("wheat").innerHTML = "Bad";
+}
+			//millets
+if ( (temp >= 26) && (temp <= 29)) {
+	document.getElementById("millets").innerHTML = "Good";
+} else {
+	document.getElementById("millets").innerHTML = "Bad";
+}
+			//maize
+if ( (temp >= 21) && (temp <= 27)) {
+	document.getElementById("maize").innerHTML = "Good";
+} else {
+	document.getElementById("maize").innerHTML = "Bad";
 }
 });
 });
